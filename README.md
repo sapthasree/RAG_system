@@ -12,8 +12,8 @@ flowchart TD
     B --> C[Preprocessing]
     C --> D[Chunking with Overlap]
     D --> E[Embedding Generation]
-    E --> F[FAISS Vector Store (Persistent)]
-    F --> G[Semantic Retrieval (Top-K)]
+    E --> F[FAISS Vector Store]
+    F --> G[Semantic Retrieval]
     G --> H[Context Construction]
     H --> I[LLM-based Answer Generation]
 ```
