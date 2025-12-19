@@ -5,23 +5,18 @@ This project implements an end-to-end **Retrieval-Augmented Generation (RAG)** p
 The system is designed with **modularity**, **persistence**, and **debuggability** in mind, mimicking real-world AI research and engineering workflows.
 
 ## Architecture
-Raw Text
-  ↓
-Ingestion
-  ↓
-Preprocessing
-  ↓
-Chunking (with overlap)
-  ↓
-Embedding Generation
-  ↓
-FAISS Vector Store (Persistent)
-  ↓
-Semantic Retrieval (Top-K)
-  ↓
-Context Construction
-  ↓
-LLM-based Answer Generation
+
+```mermaid
+flowchart TD
+    A[Raw Text] --> B[Ingestion]
+    B --> C[Preprocessing]
+    C --> D[Chunking with Overlap]
+    D --> E[Embedding Generation]
+    E --> F[FAISS Vector Store (Persistent)]
+    F --> G[Semantic Retrieval (Top-K)]
+    G --> H[Context Construction]
+    H --> I[LLM-based Answer Generation]
+```
 
 ## Key Features
 - Modular ETL pipeline (ingestion → preprocessing → chunking)
