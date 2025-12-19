@@ -6,4 +6,5 @@ def retrieve_chunks(query, model, index, chunks, k=3):
 
     results = [chunks[i] for i in indices[0]]
 
+
     return results
